@@ -27,7 +27,7 @@ import urllib.request, urllib.error
 BASE_DIR    = os.path.dirname(os.path.abspath(__file__))
 
 # !! Replace this with your Railway URL after deploying !!
-AUTH_SERVER = "telegram-server-production-8959.up.railway.app"
+AUTH_SERVER = "https://YOUR-APP.up.railway.app"
 
 def _server_request(endpoint, data):
     """POST JSON to the auth server. Returns (ok, message)."""
@@ -62,9 +62,9 @@ def show_login():
     GREEN  = "#a6e3a1"
 
     result = {}
-    mode   = tk.StringVar(value="login")   # "login" or "register"
 
     root = tk.Tk()
+    mode   = tk.StringVar(value="login")   # "login" or "register"
     root.title("Telegram Reminder")
     root.geometry("400x460")
     root.configure(bg=DARK)
